@@ -1,4 +1,5 @@
 *.php
 *.fcgi
 *.o
+*.a
 *.out
