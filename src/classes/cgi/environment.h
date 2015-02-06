@@ -15,5 +15,7 @@ namespace cgi {
         std::string getenv(const char *name) { return ::getenv(name); }
 
         std::map<std::string, std::string>& getAll();
+
+        void resetMap(void);
     };
 }

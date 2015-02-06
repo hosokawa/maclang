@@ -1,3 +1,3 @@
 CC=clang
 CXX=clang++
-CXXFLAGS=-Wall
+CXXFLAGS=-Wall -std=c++11
