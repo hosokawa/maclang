@@ -3,10 +3,14 @@
 #include <fcgi_stdio.h>
 
 int main(int argc, char *argv[]) {
-    Thorium thorium;
-    while (FCGI_Accept() >= 0)   {
-        thorium.initialize();
-        thorium.run();
-        thorium.finalize();
+    try {
+        Thorium thorium;
+        while (FCGI_Accept() >= 0)   {
+            thorium.initialize();
+            thorium.run();
+            thorium.finalize();
+        }
+    } catch (std::exception* e) {
+        delete e;
     }
 }

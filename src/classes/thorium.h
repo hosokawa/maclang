@@ -2,6 +2,7 @@
 
 class Thorium {
     cgi::Environment env;
+    std::string thorium_root;
 
 public:
     Thorium(void);

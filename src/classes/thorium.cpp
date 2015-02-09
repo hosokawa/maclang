@@ -1,8 +1,11 @@
 #include "thorium.h"
 
+#include <exception>
+#include <string.h>
 #include <fcgi_stdio.h>
 
 Thorium::Thorium(void) {
+    thorium_root = env.getExecutableDir();
 }
 
 Thorium::~Thorium(void) {
@@ -20,6 +23,7 @@ int Thorium::run(void) {
         auto value = i->second;
         printf("<p>%s: %s</p>", key.c_str(), value.c_str());
     }
+    printf("<p>%s</p>", thorium_root.c_str());
     return 0;
 }
 
